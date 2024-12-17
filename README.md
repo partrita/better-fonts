@@ -49,7 +49,7 @@ MacType과 noMeiryoUI는 Windows에서 폰트 렌더링을 개선하고 시스�
 
 1. 고딕체 폰트 = [Pretendard](https://github.com/orioncactus/pretendard)
 2. 명조체 폰트 = [Maruburi](https://hangeul.naver.com/)
-3. 고정폭 폰트 = [Fira code nerd font](https://www.nerdfonts.com/font-downloads)
+3. 고정폭 폰트 = [Menlo](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Meslo)
 
 
 # 알려진 문제와 해결 방법
