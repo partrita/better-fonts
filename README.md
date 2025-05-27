@@ -1,4 +1,4 @@
-Windows에서 Mac과 비슷한 부드러운 폰트 적용하기
+# Windows에서 Mac과 비슷한 부드러운 폰트 적용하기
 
 이 가이드는 Windows 11/10에서 Mac OS와 유사한 부드러운 폰트 렌더링을 구현하는 방법을 설명합니다. 주로 레지스트리 편집과 MacType이라는 서드파티 프로그램을 활용합니다.
 
@@ -21,6 +21,7 @@ Windows에서 Mac과 비슷한 부드러운 폰트 적용하기
 7. 재부팅 후 시스템 전반에 걸쳐 지정한 폰트가 적용된 것을 확인할 수 있습니다.
 
 # 서드파티 프로그램
+
 MacType과 noMeiryoUI는 Windows에서 폰트 렌더링을 개선하고 시스템 폰트를 변경하는 데 사용되는 유틸리티 프로그램입니다.
 
 ## MacType 사용법:
@@ -93,4 +94,34 @@ clipboxfix=1
 ```
 
 주의: 이 가이드에 따라 시스템을 수정할 때는 주의가 필요합니다. 레지스트리 편집이나 시스템 설정 변경은 시스템 안정성에 영향을 줄 수 있으므로, 반드시 백업을 먼저 진행하고 신중히 작업하세요.
+
+# Docker 이미지 빌드 및 실행
+
+프로젝트 디렉토리로 이동합니다. Docker 이미지 빌드:
+
+```bash
+docker build -t font-renderer .
+```
+
+- `font-renderer`라는 이름의 Docker 이미지를 생성합니다.
+
+
+Docker 컨테이너 실행:
+
+```bash
+docker run -it -v $(pwd):/app -u "$(id -u):$(id -g)" font-renderer
+```
+
+
+## 결과 확인
+
+실행이 완료되면 output 디렉토리에 여러 이미지 파일이 생성되어 있을 것입니다.
+
+### a꽃피는봄
+
+![](./output/image_a꽃피는봄.png)
+
+### JBD2
+
+![](./output/image_JBD2-Regular.png)
 

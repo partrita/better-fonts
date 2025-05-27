@@ -1,0 +1,19 @@
+[project]
+name = "better-fonts"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "deepthought", email = "deepthough@postech.ac.kr" }
+]
+requires-python = ">=3.9"
+dependencies = [
+    "pillow>=11.2.1",
+]
+
+[project.scripts]
+better-fonts = "better_fonts.app:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
